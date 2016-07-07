@@ -147,6 +147,7 @@ Here are a few things you can contribute to at the moment:
 * Improve the code in any way, this has been a night's job
 * **PLEASE write cheatsheets if you can, we'll appriciate it**
 * Introduce (and maybe brag a little?) us to your friends and enemies. We are pretty new and unknown thing.
+* A MAKE file would also be very good!
 * Add ideas to how one can contribute.
 
 ### Ideas for furthur improvement
