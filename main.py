@@ -89,9 +89,9 @@ def show(args):
         c.print(args)
 
 if __name__ == "__main__":
-    #os.environ.setdefault('CHEATPATH', '/usr/share/cheat/')
+    os.environ.setdefault('CHEATPATH', '/usr/share/cheat/')
     #DEBUG
-    os.environ.setdefault('CHEATPATH', 'cheats/')
+    #os.environ.setdefault('CHEATPATH', 'cheats/')
     path = os.environ['CHEATPATH'].split(':')
     parser = argparse.ArgumentParser(prog = 'cheats')
     parser.add_argument('topic', help='topic to search for')
