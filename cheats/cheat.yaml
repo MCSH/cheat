@@ -1,0 +1,35 @@
+---
+#This is an example, # acts as a comment 
+#A --- indicates start of a new card
+#You can include author, otherwise N/A will be used
+author:  Sajjad Heydari
+#Now text is the cheat. It must be there or else you'll get syntax error. 
+#The first line is | and after that each line must have 2 space as indents. 
+text: |
+  Create your cheats in a format similiar to this file. Note that 
+  this file is in YAML format, blah blah balh.
+#Tags is an optional valid YAML sequence. if none is provided the card
+#will be categorized by 'default' tag
+tags: [start, file]
+---
+author: Sajjad Heydari
+text: |
+    Okay remember when I said only 2 spaces for indention?
+    Well you can use any number you want, as long as it is consistance
+    within it's scope. It's a YAML file after all!
+      and oh, further indentions are kewl
+
+      and new lines!
+tags:
+    - tips
+    - file
+---
+author: Sajjad Heydari
+text: |-
+    Actually any valid YAML file could pass,
+    as long as it has a dictionary containing text and two optional paramaters
+    author and tags.
+    Of course tags is an array of String and author is a String
+tags:
+    - file
+    - tips
