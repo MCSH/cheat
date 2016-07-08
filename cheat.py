@@ -1,6 +1,5 @@
 #!/bin/python3
 import yaml
-import codecs
 import os
 import sys
 import argparse
@@ -54,9 +53,8 @@ def add(args):
     dic.update({'text': literal(text)})
     c = Card(dic)
     loc = args.location.split(':')[-1]
-    f = codecs.open(os.path.join(loc, args.topic + '.yaml'), 'a')
-    f.write(yaml.dump(dic, default_flow_style=False, explicit_start=True))
-    f.close()
+    with open(os.path.join(loc, args.topic + '.yaml'), 'a') as f:
+        f.write(yaml.dump(dic, default_flow_style=False, explicit_start=True))
     c.print(args)
 
 def show(args):
@@ -67,10 +65,10 @@ def show(args):
         for root, dirs, files in os.walk(loc):
             for file in files:
                 if fnmatch.fnmatch(file, pat):
-                    f = codecs.open(os.path.join(root, file), 'r')
-                    t = yaml.load_all(f)
-                    for a in t:
-                        cards.append(Card(a))
+                    with open(os.path.join(root, file), 'r') as f:
+                        t = yaml.load_all(f)
+                        for a in t:
+                            cards.append(Card(a))
     if args.tag:
         tag = set(args.tag)
         new_cards = []
