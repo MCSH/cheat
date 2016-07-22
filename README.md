@@ -2,7 +2,7 @@
 A cheatsheet manager
 
 ## What is cheat
-Cheat is a command written in python to help you manage your cheatsheets. Cheat uses YAML which makes the cheatsheets readble for humans as well as easy to interprate for machines.
+Cheat is a command written in python to help you manage your cheatsheets. Cheat uses YAML, which makes the cheatsheets readable for humans as well as easy to interprate for machines.
 
 ## Features
 * wildcard topics (You can use wildcards to search for topics)
@@ -30,7 +30,7 @@ taken from [The Official YAML Web Site] (http://yaml.org/) Read more there.
 
 We are using YAML 1.1 using PyYaml. You don't need to know YAML, if you want to create cheatsheet just see the cheatsheet on cheat.
 ### CHEATPATH
-CHEATPATH is an optional Enviormental Variable that you can set and point it to locations (yes, plural) of your cheatsheets. If none is provided the default `/usr/share/cheat/` will be used.
+CHEATPATH is an optional Environmental Variable that you can set and point it to locations (yes, plural) of your cheatsheets. If none is provided the default `/usr/share/cheat/` will be used.
 
 If you want to provide one, add something like this to your .bashrc or .zshrc:
 ```
@@ -38,7 +38,7 @@ export CHEATPATH=/place/to/first/loc:/place/to/second/one
 ```
 
 ### wildcard
-A Wildcard is a regular expression thingy that is there helping you find stuff. As an example, you may have these sheats:
+A Wildcard is a regular expression thingy that is there helping you find stuff. As an example, you may have these cheats:
 * cheat1.yaml
 * cheat2.yaml
 * camel.yaml
@@ -105,7 +105,7 @@ You can include more than one flag:
 ```
 cheat.py topic -t file -t tips
 ```
-This will bring any card containing file or tips flag. Note that tags are not wildcardified (if that's a word) and you have to type the exact topic. Maybe in future we can improve this somehow?
+This will bring any card containing file or tips flags. Note that tags are not wildcardified (if that's a word) and you have to type the exact topic. Maybe in the future we can improve this somehow?
 
 ### Location --location -l
 If you want to use a specefic location instead of CHEATPATH or the default one, you can present it here.
@@ -115,10 +115,10 @@ cheat.py topic -l /usr/share/cheats/:~/.config/cheat/
 ```
 
 ### Show --show -s
-I really have no idea why I put it here, it's the default behaviour and the only way to disable it (so far) is by calling --add, which we'll cover in the next section.
+I really have no idea why I put it here; it's the default behaviour and the only way to disable it (so far) is by calling --add, which we'll cover in the next section.
 
 ## Add cards --add 
-You can __interactivly__ add a card to your cheatsheets using this flag.
+You can __interactively__ add a card to your cheatsheets using this flag.
 ex:
 ```
 cheat.py --add
@@ -135,8 +135,8 @@ cheat.py --add -t file -t stuff
 ```
 
 ### Other commands...
-the -T or `--show_tags` still works when printing the card at end.
-the --count or -c won't throw any error, although is ineffective.
+the -T or `--show_tags` still works when printing the card at the end.
+the --count or -c won't throw any error, although it is ineffective.
 The --location or -l works as before.
 
 
@@ -145,8 +145,8 @@ Here are a few things you can contribute to at the moment:
 * Improve this README.md file, I beg you!
 * Check to see if there is any issue you can solve.
 * Improve the code in any way, this has been a night's job
-* **PLEASE write cheatsheets if you can, we'll appriciate it**
-* Introduce (and maybe brag a little?) us to your friends and enemies. We are pretty new and unknown thing.
+* **PLEASE write cheatsheets if you can, we'll appreciate it**
+* Introduce us (and maybe brag a little?) to your friends and enemies. We are a pretty new and unknown thing.
 * A MAKE file would also be very good!
 * Add ideas to how one can contribute.
 
