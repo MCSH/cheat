@@ -29,6 +29,17 @@ A cheat card is a single cheat or reminder, which includes three parts:
 taken from [The Official YAML Web Site] (http://yaml.org/) Read more there.
 
 We are using YAML 1.1 using PyYaml. You don't need to know YAML, if you want to create cheatsheet just see the cheatsheet on cheat.
+
+You should install `pyYaml` on your `system` or `virtual-environment` in order to be able to use the project. you can either use:
+
+    pip install -r requirements.txt
+
+or use
+
+    pip install pyyaml
+
+later would install latest version of `pyYaml` and first will install the latesttested compatible version.
+
 ### CHEATPATH
 CHEATPATH is an optional Environmental Variable that you can set and point it to locations (yes, plural) of your cheatsheets. If none is provided the default `/usr/share/cheat/` will be used.
 
