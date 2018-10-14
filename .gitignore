@@ -1,0 +1,11 @@
+# every day normal files
+*#*
+*~*
+*pyc*
+*.cache*
+# Pycharm generated files
+*idea*
+# Setuptools distribution folder.
+/dist/
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info

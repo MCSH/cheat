@@ -1,4 +1,4 @@
-#!/bin/python3
+from __future__ import print_function
 import yaml
 import os
 import sys
@@ -86,26 +86,37 @@ def show(args):
     for c in cards:
         c.print(args)
 
-if __name__ == "__main__":
+
+def main():
     os.environ.setdefault('CHEATPATH', '/usr/share/cheat/')
-    #DEBUG
-    #os.environ.setdefault('CHEATPATH', 'cheats/')
+    # DEBUG
+    # os.environ.setdefault('CHEATPATH', 'cheats/')
     path = os.environ['CHEATPATH'].split(':')
-    parser = argparse.ArgumentParser(prog = 'cheats')
+    parser = argparse.ArgumentParser(prog='cheats')
     parser.add_argument('topic', help='topic to search for')
-    parser.add_argument('--tag', '-t', help='specify tags to search for, could be used more than once', action='append')
+    parser.add_argument('--tag', '-t',
+                        help='specify tags to search for, could be used more than once',
+                        action='append')
     parser.add_argument('--location', '-l', default=os.environ['CHEATPATH'])
     group = parser.add_mutually_exclusive_group(required=False)
-    group.add_argument('--show','-s', action='store_true',help = 'show cards, optional')
-    group.add_argument('--add',  action='store_true', help = 'add a card interactively')
-    parser.add_argument('--author', '-a', help='show authors', action='store_true')
-    parser.add_argument('--show_tags','-T', help='show tagss', action='store_true')
-    parser.add_argument('--count' , '-c',type=int,help='limit the number of results, 0 for unlimited')
-    parser.description = "a cheatsheet manager" 
+    group.add_argument('--show', '-s', action='store_true',
+                       help='show cards, optional')
+    group.add_argument('--add', action='store_true',
+                       help='add a card interactively')
+    parser.add_argument('--author', '-a', help='show authors',
+                        action='store_true')
+    parser.add_argument('--show_tags', '-T', help='show tagss',
+                        action='store_true')
+    parser.add_argument('--count', '-c', type=int,
+                        help='limit the number of results, 0 for unlimited')
+    parser.description = "a cheatsheet manager"
     parser.epilog = "by Sajjad Heydari (MCSHemail@gmail.com), for more info look at the docs!"
     args = parser.parse_args()
     if args.add:
         add(args)
-    else: #arg.show
+    else:  # arg.show
         show(args)
+
+if __name__ == "__main__":
+main()
 
