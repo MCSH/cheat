@@ -1,4 +1,4 @@
-#!bin/env python
+#!/usr/bin/env python3
 from __future__ import print_function
 import yaml
 import os
@@ -119,5 +119,5 @@ def main():
         show(args)
 
 if __name__ == "__main__":
-main()
+    main()
 
